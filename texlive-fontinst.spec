@@ -1,3 +1,9 @@
+# revision 23089
+# category Package
+# catalog-ctan /fonts/utilities/fontinst
+# catalog-date 2009-09-26 11:43:36 +0200
+# catalog-license lppl
+# catalog-version 1.933
 Name:		texlive-fontinst
 Version:	1.933
 Release:	1
@@ -207,6 +213,7 @@ such as the pltotf and vptovf programs.
 %doc %{_texmfdistdir}/source/fontinst/base/fisource.tex
 %doc %{_texmfdistdir}/source/fontinst/base/fitrig.dtx
 %doc %{_texmfdistdir}/source/fontinst/base/fontinst.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -222,3 +229,5 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
