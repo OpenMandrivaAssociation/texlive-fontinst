@@ -1,4 +1,4 @@
-# revision 23089
+# revision 26689
 # category Package
 # catalog-ctan /fonts/utilities/fontinst
 # catalog-date 2009-09-26 11:43:36 +0200
@@ -6,7 +6,7 @@
 # catalog-version 1.933
 Name:		texlive-fontinst
 Version:	1.933
-Release:	2
+Release:	3
 Summary:	Help with installing fonts for TeX and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/utilities/fontinst
