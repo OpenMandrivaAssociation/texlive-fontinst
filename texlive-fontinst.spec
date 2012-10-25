@@ -1,12 +1,12 @@
-# revision 26689
+# revision 27335
 # category Package
 # catalog-ctan /fonts/utilities/fontinst
-# catalog-date 2009-09-26 11:43:36 +0200
+# catalog-date 2012-07-06 12:12:34 +0200
 # catalog-license lppl
 # catalog-version 1.933
 Name:		texlive-fontinst
 Version:	1.933
-Release:	3
+Release:	4
 Summary:	Help with installing fonts for TeX and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/utilities/fontinst
@@ -47,6 +47,7 @@ such as the pltotf and vptovf programs.
 #-----------------------------------------------------------------------
 %files
 %{_bindir}/fontinst
+%{_texmfdistdir}/scripts/tetex/fontinst.sh
 %{_texmfdistdir}/tex/fontinst/base/bbox.sty
 %{_texmfdistdir}/tex/fontinst/base/cfntinst.sty
 %{_texmfdistdir}/tex/fontinst/base/finstmsc.sty
