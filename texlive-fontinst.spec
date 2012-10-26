@@ -6,7 +6,7 @@
 # catalog-version 1.933
 Name:		texlive-fontinst
 Version:	1.933
-Release:	4
+Release:	5
 Summary:	Help with installing fonts for TeX and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/utilities/fontinst
@@ -14,7 +14,6 @@ License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontinst.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontinst.doc.tar.xz
 Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontinst.source.tar.xz
-Source3:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontinst.x86_64-linux.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -207,14 +206,15 @@ such as the pltotf and vptovf programs.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2 -a3
+%setup -c -a0 -a1 -a2
 
 %build
 
 %install
-# shell script
 mkdir -p %{buildroot}%{_bindir}
-cp -fpa bin/x86_64-linux/fontinst %{buildroot}%{_bindir}
+pushd %{buildroot}%{_bindir}
+    ln -sf %{_texmfdistdir}/scripts/tetex/fontinst.sh fontinst
+popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
