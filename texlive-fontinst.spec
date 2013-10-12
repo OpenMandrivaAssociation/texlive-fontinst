@@ -1,4 +1,4 @@
-# revision 27335
+# revision 29764
 # category Package
 # catalog-ctan /fonts/utilities/fontinst
 # catalog-date 2012-07-06 12:12:34 +0200
@@ -6,7 +6,7 @@
 # catalog-version 1.933
 Name:		texlive-fontinst
 Version:	1.933
-Release:	5
+Release:	6
 Summary:	Help with installing fonts for TeX and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/utilities/fontinst
@@ -46,7 +46,7 @@ such as the pltotf and vptovf programs.
 #-----------------------------------------------------------------------
 %files
 %{_bindir}/fontinst
-%{_texmfdistdir}/scripts/tetex/fontinst.sh
+%{_texmfdistdir}/scripts/texlive/fontinst.sh
 %{_texmfdistdir}/tex/fontinst/base/bbox.sty
 %{_texmfdistdir}/tex/fontinst/base/cfntinst.sty
 %{_texmfdistdir}/tex/fontinst/base/finstmsc.sty
@@ -188,7 +188,7 @@ such as the pltotf and vptovf programs.
 %doc %{_texmfdistdir}/doc/fonts/fontinst/test/v1931test1.tex
 %doc %{_texmfdistdir}/doc/fonts/fontinst/test/v1931test2.tex
 %doc %{_mandir}/man1/fontinst.1*
-%doc %{_texmfdir}/doc/man/man1/fontinst.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/fontinst.man1.pdf
 #- source
 %doc %{_texmfdistdir}/source/fontinst/base/CHANGES
 %doc %{_texmfdistdir}/source/fontinst/base/fibasics.dtx
@@ -213,9 +213,9 @@ such as the pltotf and vptovf programs.
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/tetex/fontinst.sh fontinst
+    ln -sf %{_texmfdistdir}/scripts/texlive/fontinst.sh fontinst
 popd
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
