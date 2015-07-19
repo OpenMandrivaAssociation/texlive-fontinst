@@ -6,7 +6,7 @@
 # catalog-version 1.933
 Name:		texlive-fontinst
 Version:	1.933
-Release:	13
+Release:	14
 Summary:	Help with installing fonts for TeX and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/utilities/fontinst
