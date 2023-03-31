@@ -1,6 +1,6 @@
 Name:		texlive-fontinst
 Version:	62517
-Release:	1
+Release:	2
 Summary:	Help with installing fonts for TeX and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/utilities/fontinst
