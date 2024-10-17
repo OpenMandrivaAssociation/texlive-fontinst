@@ -3,7 +3,7 @@ Version:	62517
 Release:	2
 Summary:	Help with installing fonts for TeX and LaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/utilities/fontinst
+URL:		https://www.ctan.org/tex-archive/fonts/utilities/fontinst
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontinst.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fontinst.doc.r%{version}.tar.xz
