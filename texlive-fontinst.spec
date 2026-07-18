@@ -1,5 +1,6 @@
 %global tl_name fontinst
 %global tl_revision 79618
+%global tl_bin_links fontinst:%{_texmfdistdir}/scripts/texlive-extra/fontinst.sh
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -16,6 +17,8 @@ BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(fontinst.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 TeX macros for converting Adobe Font Metric files to TeX metric and
